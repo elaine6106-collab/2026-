@@ -13,8 +13,9 @@ zone_type = st.sidebar.selectbox("基地類別 (依規則第4條)", [1, 2, 3, 4,
 
 # 自動判定標準 (GVR 標準)
 gvr_standards = {1: 2.0, 2: 1.9, 3: 1.8, 4: 1.6, 5: 1.4}
+ratio standards ={1: 0.9, 2: 0.8,3: 0.7, 4: 0.6, 5:0.5}
 target_gvr = gvr_standards[zone_type]
-target_ratio = 0.8  # 預設綠覆率門檻
+target_ratio = ratio standards[zone_type]
 
 # --- 主畫面：植栽輸入區 ---
 st.header("🌳 第二步：輸入植栽配置")
