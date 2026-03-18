@@ -50,9 +50,9 @@ res1, res2 = st.columns(2)
 with res1:
     st.metric("現行綠覆率", f"{current_ratio:.2%}")
     if current_ratio >= target_ratio:
-        st.success("✅ 綠覆率符合標準 (>= 80%)")
+        st.success(f"✅ 綠覆率符合{zone_type} 類降溫標準 (>= {target_ratio})")
     else:
-        st.error(f"❌ 綠覆率不足 (標準: {target_ratio:.0%})")
+        st.error(f"❌ 綠覆率不足 (標準: {target_ratio})")
 
 with res2:
     st.metric("2026 新制綠容率 (GVR)", f"{current_gvr:.2f}")
